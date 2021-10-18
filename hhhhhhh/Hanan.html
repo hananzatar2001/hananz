@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head><title>Web1 Assignment</title>
+
+<style>
+		
+	.column {
+ 	 	float: left;
+  		width: 20%;
+  		padding: 10px;
+	}
+
+	.row::after {
+ 		content: "";
+  		clear: both;
+  		display: table;
+	}
+
+#h1
+{
+    margin: 20px;
+    
+}
+#h2
+{
+    text-align: center;
+}
+</style>
+	
+<script type="text/javascript">
+ var randNum  ;
+ const max=6 ;
+
+
+	//function to change the style visbility from hidden to visible
+    function changeVisibility() {
+
+ 		 randNum = Math.floor(Math.random() * max) + 1 //random number to chose a picture
+
+        if (randNum === 1){
+        	document.getElementById('img1').style.visibility="visible";
+        }
+
+        if (randNum === 2){
+			document.getElementById('img2').style.visibility="visible";
+
+        }
+
+        if (randNum === 3){
+        	document.getElementById('img3').style.visibility="visible";
+        }
+
+        if (randNum === 4){
+			document.getElementById('img4').style.visibility="visible";
+
+        }
+        if (randNum === 5){
+        	document.getElementById('img5').style.visibility="visible";
+        }
+
+        if (randNum === 6){
+			document.getElementById('img6').style.visibility="visible";
+
+        }
+    }
+</script>
+
+</head>
+<body id ="h1" bgcolor="#800080">
+	<h1 id ="h2"> planets</h1>
+	<div class="row">
+  		<div class="column">
+    		<img id="img1" src="a.jpg" class="position" style="visibility:hidden" width="255" height="255"/>
+    	</div>
+    	<div class="column">
+    		<img id="img2" src="b.jpeg" class="position" style="visibility:hidden" width="255" height="255"/>
+    	</div>
+    	<div class="column">
+    		<img id="img3" src="c.jpg" class="position" style="visibility:hidden" width="255" height="255"/>
+    	</div>
+    </div>
+    <div class="row">
+    	<div class="column">
+    		<img id="img4" src="d.jpg" class="position" style="visibility:hidden" width="255" height="255"/>
+    	</div>
+    	<div class="column">
+			<img id="img5" src="e.jpg" class="position" style="visibility:hidden" width="255" height="255"/>
+		</div>
+		<div class="column">
+			<img id="img6" src="f.jpg" class="position" style="visibility:hidden" width="255" height="255"/>
+		</div>
+	</div>
+	<input type="button" value="chosen" onclick="changeVisibility();" style="text-align: center;"/>
+</body>
+</html>
